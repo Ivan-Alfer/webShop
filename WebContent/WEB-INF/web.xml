@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>MyProject</display-name>
+	<!-- <welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list> -->
+
+	<servlet>
+		<description></description>
+		<display-name>Controller</display-name>
+		<servlet-name>Controller</servlet-name>
+		<servlet-class>by.myhome.proj.controller.Controller</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Controller</servlet-name>
+		<url-pattern>/Controller</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>show_category</servlet-name>
+		<servlet-class>by.myhome.proj.controller.Controller</servlet-class>
+		<init-param>
+			<param-name>command</param-name>
+			<param-value>SHOW_CATEGORY</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>show_category</servlet-name>
+		<url-pattern>/category</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>admin_show_category</servlet-name>
+		<servlet-class>by.myhome.proj.controller.Controller</servlet-class>
+		<init-param>
+			<param-name>command</param-name>
+			<param-value>ADMIN_SHOW_CATEGORY</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>admin_show_category</servlet-name>
+		<url-pattern>/administration/category</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>show_product</servlet-name>
+		<servlet-class>by.myhome.proj.controller.Controller</servlet-class>
+		<init-param>
+			<param-name>command</param-name>
+			<param-value>SHOW_PRODUCT</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>show_product</servlet-name>
+		<url-pattern>/show_product</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>admin_show_product</servlet-name>
+		<servlet-class>by.myhome.proj.controller.Controller</servlet-class>
+		<init-param>
+			<param-name>command</param-name>
+			<param-value>ADMIN_SHOW_PRODUCT</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>admin_show_product</servlet-name>
+		<url-pattern>/administration/show_product</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>add_to_basket</servlet-name>
+		<servlet-class>by.myhome.proj.controller.Controller</servlet-class>
+		<init-param>
+			<param-name>command</param-name>
+			<param-value>ADD_TO_BASKET</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>add_to_basket</servlet-name>
+		<url-pattern>/shop/add_to_basket</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>delete_from_basket</servlet-name>
+		<servlet-class>by.myhome.proj.controller.Controller</servlet-class>
+		<init-param>
+			<param-name>command</param-name>
+			<param-value>DELETE_FROM_BASKET</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>delete_from_basket</servlet-name>
+		<url-pattern>/delete_from_basket</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>basket</servlet-name>
+		<url-pattern>/shop/basket</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>basket</servlet-name>
+		<jsp-file>/WEB-INF/jsp/basket.jsp</jsp-file>
+	</servlet>
+
+	<servlet>
+		<servlet-name>logout</servlet-name>
+		<servlet-class>by.myhome.proj.controller.Controller</servlet-class>
+		<init-param>
+			<param-name>command</param-name>
+			<param-value>LOGOUT</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>logout</servlet-name>
+		<url-pattern>/logout</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>delete_product</servlet-name>
+		<servlet-class>by.myhome.proj.controller.Controller</servlet-class>
+		<init-param>
+			<param-name>command</param-name>
+			<param-value>DELETE_PRODUCT</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>delete_product</servlet-name>
+		<url-pattern>/administration/delete_product</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>go_to_add_product</servlet-name>
+		<servlet-class>by.myhome.proj.controller.Controller</servlet-class>
+		<init-param>
+			<param-name>command</param-name>
+			<param-value>GO_TO_ADD_PRODUCT</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>go_to_add_product</servlet-name>
+		<url-pattern>/administration/add_product</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>go_to_edit_product</servlet-name>
+		<servlet-class>by.myhome.proj.controller.Controller</servlet-class>
+		<init-param>
+			<param-name>command</param-name>
+			<param-value>GO_TO_EDIT_PRODUCT</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>go_to_edit_product</servlet-name>
+		<url-pattern>/administration/edit_product</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>admin_all_products</servlet-name>
+		<servlet-class>by.myhome.proj.controller.Controller</servlet-class>
+		<init-param>
+			<param-name>command</param-name>
+			<param-value>ADMIN_ALL_PRODUCTS</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>admin_all_products</servlet-name>
+		<url-pattern>/administration/all_products</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>go_to_main_page</servlet-name>
+		<servlet-class>by.myhome.proj.controller.Controller</servlet-class>
+		<init-param>
+			<param-name>command</param-name>
+			<param-value>GO_TO_MAIN_PAGE</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>go_to_main_page</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+
+	<listener>
+		<listener-class>by.myhome.proj.controller.ConnectionPoolInit</listener-class>
+	</listener>
+
+	<filter>
+		<display-name>AuthenticationFilter</display-name>
+		<filter-name>AuthenticationFilter</filter-name>
+		<filter-class>by.myhome.proj.controller.filter.AuthenticationFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>AuthenticationFilter</filter-name>
+		<url-pattern>/shop/*</url-pattern>
+	</filter-mapping>
+
+</web-app>
