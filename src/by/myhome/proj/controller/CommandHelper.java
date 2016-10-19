@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import by.myhome.proj.command.Command;
+import by.myhome.proj.command.admin.impl.AddCategory;
 import by.myhome.proj.command.admin.impl.AddProduct;
 import by.myhome.proj.command.admin.impl.AdminAllProduct;
 import by.myhome.proj.command.admin.impl.AdminShowCategories;
@@ -47,6 +48,7 @@ public class CommandHelper {
 		commands.put(CommandName.GO_TO_EDIT_PRODUCT, new GoToEditProduct());
 		commands.put(CommandName.EDIT_PRODUCT, new EditProduct());
 		commands.put(CommandName.ADMIN_ALL_PRODUCTS, new AdminAllProduct());
+		commands.put(CommandName.ADD_CATEGORY, new AddCategory());
 	}
 	
 	Command getCommand(String name){
